@@ -4,15 +4,261 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Summer Sale</title>
+    <!-- Tailwind & Daisy UI -->
     <link
       href="https://cdn.jsdelivr.net/npm/daisyui@3.5.1/dist/full.css"
       rel="stylesheet"
       type="text/css"
     />
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome -->
+    <script
+      src="https://kit.fontawesome.com/9bb8312639.js"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      .font-sans {
+        font-family: "Work Sans", sans-serif;
+      }
+      .fa-star {
+        color: gold;
+      }
+    </style>
   </head>
   <body>
-    <h1>Summer Sale</h1>
+    <header>
+      <!-- Container Div -->
+      <div
+        class="bg-[#F9F6E2] flex flex-col-reverse lg:flex-row justify-center items-center text-center"
+      >
+        <!-- Text Container -->
+        <div class="flex flex-col mx-auto my-4 lg:my-0 mr-0 lg:mr-4">
+          <h4 class="text-3xl font-sans font-medium">---SALE FEVER---</h4>
+          <h1 class="text-5xl lg:w-[467px] py-5 font-sans font-bold">
+            Purchase TK 200 or above & get
+            <span class="text-5xl text-fuchsia-500">20% off</span>
+          </h1>
+          <p class="text-2xl font-sans font-medium">
+            Use Promo Code
+            <button class="btn text-white bg-fuchsia-500 hover:bg-fuchsia-300">
+              SELL200
+            </button>
+          </p>
+        </div>
+        <!-- Image Container -->
+        <div class="flex flex-col mx-auto my-4 lg:my-0 ml-0 lg:ml-4">
+          <img src="images/Summer 1.png" alt="Summer Sale" />
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="mt-20">
+        <div class="flex flex-col lg:flex-row gap-6">
+          <div class="flex flex-col mx-auto">
+            <div>
+              <h3 class="text-3xl font-sans font-medium pb-3">Kitchenware</h3>
+            </div>
+            <div class="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6">
+              <!-- Card-1 -->
+              <div class="flex flex-col items-center w-96 shadow-2xl">
+                <figure
+                  class="bg-zinc-100 m-5 rounded-lg w-[302px] h-[200px] flex flex-col justify-center items-center"
+                >
+                  <img src="images/prod1.png" alt="prod1" />
+                </figure>
+                <div class="text-center py-5">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                  <p>K. Accessories</p>
+                  <p>1299.00 TK</p>
+                  <div class=""></div>
+                </div>
+              </div>
+              <!-- Card-2 -->
+              <div class="flex flex-col items-center w-96 shadow-2xl">
+                <figure
+                  class="bg-zinc-100 m-5 rounded-lg w-[302px] h-[200px] flex flex-col justify-center items-center"
+                >
+                  <img src="images/prod2.png" alt="prod1" />
+                </figure>
+                <div class="text-center py-5">
+                  <i class="fa-regular fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                  <p>K. Accessories</p>
+                  <p>1390.00 TK</p>
+                  <div class=""></div>
+                </div>
+              </div>
+              <!-- Card-3 -->
+              <div class="flex flex-col items-center w-96 shadow-2xl">
+                <figure
+                  class="bg-zinc-100 m-5 rounded-lg w-[302px] h-[200px] flex flex-col justify-center items-center"
+                >
+                  <img src="images/prod3.png" alt="prod1" />
+                </figure>
+                <div class="text-center py-5">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                  <p>Home Cooker</p>
+                  <p>3900.00 TK</p>
+                  <div class=""></div>
+                </div>
+              </div>
+            </div>
+            <!-- Sportswear section -->
+            <div>
+              <h3 class="text-3xl font-sans font-medium py-5">Sportswear</h3>
+            </div>
+            <div class="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6">
+              <!-- Card-4 -->
+              <div class="flex flex-col items-center w-96 shadow-2xl">
+                <figure
+                  class="bg-zinc-100 m-5 rounded-lg w-[302px] h-[200px] flex flex-col justify-center items-center"
+                >
+                  <img src="images/prod4.png" alt="prod1" />
+                </figure>
+                <div class="text-center py-5">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                  <p>Sports Cap Black</p>
+                  <p>390.00 TK</p>
+                  <div class=""></div>
+                </div>
+              </div>
+              <!-- Card-5 -->
+              <div class="flex flex-col items-center w-96 shadow-2xl">
+                <figure
+                  class="bg-zinc-100 m-5 rounded-lg w-[302px] h-[200px] flex flex-col justify-center items-center"
+                >
+                  <img src="images/prod5.png" alt="prod1" />
+                </figure>
+                <div class="text-center py-5">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                  <p>Full Sleave Jersey Set</p>
+                  <p>1900.00 TK</p>
+                  <div class=""></div>
+                </div>
+              </div>
+              <!-- Card-6 -->
+              <div class="flex flex-col items-center w-96 shadow-2xl">
+                <figure
+                  class="bg-zinc-100 m-5 rounded-lg w-[302px] h-[200px] flex flex-col justify-center items-center"
+                >
+                  <img src="images/prod6.png" alt="prod1" />
+                </figure>
+                <div class="text-center py-5">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                  <p>Sports Cates</p>
+                  <p>3900.00 TK</p>
+                  <div class=""></div>
+                </div>
+              </div>
+            </div>
+            <!-- Furniture section -->
+            <div>
+              <h3 class="text-3xl font-sans font-medium py-5">Furniture</h3>
+            </div>
+            <div class="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6">
+              <!-- Card-7 -->
+              <div class="flex flex-col items-center w-96 shadow-2xl">
+                <figure
+                  class="bg-zinc-100 m-5 rounded-lg w-[302px] h-[200px] flex flex-col justify-center items-center"
+                >
+                  <img src="images/prod7.png" alt="prod1" />
+                </figure>
+                <div class="text-center py-5">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                  <p>Single Relax Chair</p>
+                  <p>7900.00 TK</p>
+                  <div class=""></div>
+                </div>
+              </div>
+              <!-- Card-8 -->
+              <div class="flex flex-col items-center w-96 shadow-2xl">
+                <figure
+                  class="bg-zinc-100 m-5 rounded-lg w-[302px] h-[200px] flex flex-col justify-center items-center"
+                >
+                  <img src="images/prod8.png" alt="prod1" />
+                </figure>
+                <div class="text-center py-5">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <p>Children play</p>
+                  <p>2900.00 TK</p>
+                  <div class=""></div>
+                </div>
+              </div>
+              <!-- Card-9 -->
+              <div class="flex flex-col items-center w-96 shadow-2xl">
+                <figure
+                  class="bg-zinc-100 m-5 rounded-lg w-[302px] h-[200px] flex flex-col justify-center items-center"
+                >
+                  <img class="" src="images/prod9.png" alt="prod1" />
+                </figure>
+                <div class="text-center py-5">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <p>Flexible Sofa</p>
+                  <p>39000.00 TK</p>
+                  <div class=""></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div>
+              <h4>Have coupon?</h4>
+              <input type="text" /> <button class="btn">Apply</button>
+            </div>
+            <div>
+              <hr />
+              <p>Total Price:</p>
+              <p>Discount:</p>
+              <p>Total:</p>
+              <hr />
+              <button class="btn">Make Purchase</button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
     <script src="script.js"></script>
   </body>
 </html>
