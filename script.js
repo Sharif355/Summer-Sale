@@ -1,11 +1,10 @@
-function getInputValueById(inputId) {
-    const valueById = document.getElementById(inputId)
-    const inputValue = valueById.value;
-}
 
-function getTextValueById(textId) {
-    const textValueById = document.getElementById(textId)
-    const textValue = textValueById.innerText;
+let totalPrice = 0;
+
+function textValueById(inputId) {
+    const textValue = document.getElementById(inputId);
+    const value = parseFloat(textValue.innerText);
+    return value;
 }
 
 function setElementById(elementId, element) {
@@ -13,11 +12,101 @@ function setElementById(elementId, element) {
     elementById.innerText = element;
 }
 
-function cardText(text) {
-    const textValue = text.parentNode.childNodes[3].childNodes[3].childNodes[11].innerText;
-    const p = document.createElement('li');
-    p.innerText = textValue;
+function addToCardText(text, price) {
+
     const setElement = document.getElementById('coupon-cart');
+    const count = setElement.childElementCount
+    const p = document.createElement('p');
+    p.innerText = `${count + 1}. ${text}`;
+
     setElement.appendChild(p);
-    setElementById('coupon-cart', textValue)
+    totalPrice += price;
+    setElementById('total-price', totalPrice.toFixed(2))
+}
+
+function clearCart() {
+    const couponCartElement = document.getElementById('coupon-cart')
+    const totalPrice = document.getElementById('total-price')
+    const discountPrice = document.getElementById('discount-price')
+    const finalPrice = document.getElementById('final-price')
+    const inputElement = document.getElementById('input-field')
+    couponCartElement.innerHTML = ''
+    totalPrice.innerText = ''
+    discountPrice.innerText = ''
+    finalPrice.innerText = ''
+    inputElement.value = ''
+}
+
+function clearToHome() {
+    clearCart()
+}
+
+function btnApply() {
+    const inputElement = document.getElementById('input-field')
+    const inputValue = inputElement.value;
+    if (inputValue !== 'SELL200') {
+        alert('Please  insert SELL200')
+        return;
+    }
+    const totalPrice = textValueById('total-price');
+    const discount = (totalPrice * 20) / 100;
+    setElementById('discount-price', discount);
+    const finalPrice = totalPrice - discount;
+    setElementById('final-price', finalPrice)
+}
+
+// card 1
+function card1(value) {
+    const textValue = value.querySelector(".text-xl").innerText;
+    const textNum = parseFloat(value.querySelector('.text-lg').innerText);
+    addToCardText(textValue, textNum)
+}
+// card 2
+function card2(value) {
+    const textValue = value.querySelector('.text-xl').innerText;
+    const textNum = parseFloat(value.querySelector('.text-lg').innerText);
+    addToCardText(textValue, textNum);
+}
+
+// card 3
+function card3(value) {
+    const textValue = value.querySelector('.text-xl').innerText;
+    const textNum = parseFloat(value.querySelector('.text-lg').innerText);
+    addToCardText(textValue, textNum)
+}
+// card 4
+function card4(value) {
+    const textValue = value.querySelector('.text-xl').innerText;
+    const textNum = parseFloat(value.querySelector('.text-lg').innerText);
+    addToCardText(textValue, textNum)
+}
+// card 5
+function card5(value) {
+    const textValue = value.querySelector('.text-xl').innerText;
+    const textNum = parseFloat(value.querySelector('.text-lg').innerText);
+    addToCardText(textValue, textNum)
+}
+// card 6
+function card6(value) {
+    const textValue = value.querySelector('.text-xl').innerText;
+    const textNum = parseFloat(value.querySelector('.text-lg').innerText);
+    addToCardText(textValue, textNum)
+}
+// card 7
+function card7(value) {
+    const textValue = value.querySelector('.text-xl').innerText;
+    const textNum = parseFloat(value.querySelector('.text-lg').innerText);
+    addToCardText(textValue, textNum)
+}
+// card 8
+function card8(value) {
+    const textValue = value.querySelector('.text-xl').innerText;
+    const textNum = parseFloat(value.querySelector('.text-lg').innerText);
+    addToCardText(textValue, textNum)
+}
+// card 9
+function card9(value) {
+    const textValue = value.querySelector('.text-xl').innerText;
+    const textNum = parseFloat(value.querySelector('.text-lg').innerText);
+    addToCardText(textValue, textNum)
 }
