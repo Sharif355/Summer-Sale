@@ -50,11 +50,13 @@ function clearCart() {
     discountPrice.innerText = ''
     finalPrice.innerText = ''
     inputElement.value = ''
+    totalPrice.innerText = 0;
+    const purchaseButton = document.getElementById('btn-purchase');
+    purchaseButton.setAttribute('disabled', true);
+    const applyButton = document.getElementById('apply-button')
+    applyButton.setAttribute('disabled', true)
 }
 
-function clearToHome() {
-    clearCart()
-}
 // Apply Button Function
 function btnApply() {
 
