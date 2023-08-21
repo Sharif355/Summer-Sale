@@ -22,6 +22,21 @@ function addToCardText(text, price) {
     setElement.appendChild(p);
     totalPrice += price;
     setElementById('total-price', totalPrice.toFixed(2))
+    const applyButton = document.getElementById('apply-button')
+    if (totalPrice >= 200) {
+        applyButton.removeAttribute('disabled', false);
+    }
+    else {
+        applyButton.setAttribute('disabled', true);
+    }
+
+    const purchaseButton = document.getElementById('btn-purchase');
+
+    if (totalPrice > 0) {
+        purchaseButton.removeAttribute('disabled', false);
+    } else {
+        purchaseButton.setAttribute('disabled', true);
+    }
 }
 
 function clearCart() {
@@ -42,18 +57,22 @@ function clearToHome() {
 }
 
 function btnApply() {
-    const inputElement = document.getElementById('input-field')
+
+    const priceTotal = textValueById('total-price');
+    const inputElement = document.getElementById('input-field');
     const inputValue = inputElement.value;
+
     if (inputValue !== 'SELL200') {
-        alert('Please  insert SELL200')
+        alert('Please insert SELL200');
         return;
     }
-    const totalPrice = textValueById('total-price');
-    const discount = (totalPrice * 20) / 100;
-    setElementById('discount-price', discount);
-    const finalPrice = totalPrice - discount;
-    setElementById('final-price', finalPrice)
+    const discount = (priceTotal * 20) / 100;
+    const finalPrice = priceTotal - discount;
+
+    setElementById('discount-price', discount.toFixed(2));
+    setElementById('final-price', finalPrice.toFixed(2));
 }
+
 
 // card 1
 function card1(value) {

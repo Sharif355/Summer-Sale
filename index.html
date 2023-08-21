@@ -272,11 +272,12 @@
               class="border-2 border-zinc-300 rounded-sm w-[230px] h-[40px] relative"
               placeholder="Coupon Code"
             />
-            <button onclick="btnApply()"
-              class="bg-fuchsia-500 text-white hover:bg-fuchsia-300 w-[84px] h-[40px] rounded-lg absolute right-16 lg:right-12"
+            <button onclick="btnApply()"  disabled id="apply-button"
+              class="bg-fuchsia-500 text-white w-[84px] h-[40px] rounded-lg absolute right-16 lg:right-12  disabled:bg-fuchsia-500 disabled:cursor-not-allowed "
             >
               Apply
             </button>
+           
           </div>
           <div class="border-2 border-white shadow-2xl mt-5 p-5 text-center lg:text-left">
             <div class="font-sans font-medium" id="coupon-cart"></div>
@@ -286,7 +287,7 @@
               <p class="font-sans font-medium text-lg">Discount: <span id="discount-price"></span></p>
               <p class="font-sans font-medium text-lg">Total: <span id="final-price"></span></p>
               <hr class="my-3" />
-              <a href="#my_modal_8" onclick="btnPurchase()" class="btn lg:w-full bg-fuchsia-500 text-white"
+              <a href="#my_modal_8" onclick="btnPurchase()" id="btn-purchase" disabled  class="btn lg:w-full bg-fuchsia-500 text-white"
                 >Make Purchase</a
               >
             </div>
