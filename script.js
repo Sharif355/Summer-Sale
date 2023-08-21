@@ -11,7 +11,7 @@ function setElementById(elementId, element) {
     const elementById = document.getElementById(elementId);
     elementById.innerText = element;
 }
-
+// add element at the cart , also set the prices of items
 function addToCardText(text, price) {
 
     const setElement = document.getElementById('coupon-cart');
@@ -38,7 +38,7 @@ function addToCardText(text, price) {
         purchaseButton.setAttribute('disabled', true);
     }
 }
-
+// Clear the Cart after complete the purchase
 function clearCart() {
     const couponCartElement = document.getElementById('coupon-cart')
     const totalPrice = document.getElementById('total-price')
@@ -55,7 +55,7 @@ function clearCart() {
 function clearToHome() {
     clearCart()
 }
-
+// Apply Button Function
 function btnApply() {
 
     const priceTotal = textValueById('total-price');
